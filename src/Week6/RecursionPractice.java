@@ -1,12 +1,5 @@
+//* Christina Parkhurst - CS 202 Week 6 In-Class Exercises *//
 package Week6;
-//Recursion calls itself, passing a different parameter each time, until a base case is met.
-//It's a method that is a loop -
-//One loop structure does the heavy lifting. It's inverted; rather than many objects calling a method, a method calls itself many times.
-//FIFO: "First in, first out." LIFO: "Last in, first out." etc.
-//It's like asking "what position in line am I?" and asking the next person until you hit the front of the line, or "base" case.
-//Keeps asking a question until you get the answer out.
-//If (base case) {answer} else {recursive call}
-//Functional languages use recursion exclusively; no loops
 
 public class RecursionPractice {
     public static int exponential(int x,int y) {
@@ -37,11 +30,7 @@ public class RecursionPractice {
         }
     }
 
-    public static void writeStars(int star) {
-        for (int i=0; i<star; i++) {
-            System.out.print("* ");
-        }
-    }
+
     public static String writeParentheses(String name, int anum) {
         if (anum<0) { //I'm illegal
             throw new IllegalArgumentException("Error: cannot have negative value: " + anum);
@@ -71,14 +60,26 @@ public class RecursionPractice {
     public static void main(String[] args) {
         //writeStars(5);
         System.out.println();
-        writeRecursiveStars(7);
-        System.out.println(writeParentheses("Hello", 5));
-        System.out.println(writeParentheses("Rebekah", 2));
-        System.out.println(writeParentheses("Recursive fun",0));
-        System.out.println(factorial(5));
-        System.out.println(exponential(4,10));
+        writeRecursiveStars(5);
+        writeRecursiveStars(4);
+        writeRecursiveStars(3);
+//        System.out.println(writeParentheses("Hello", 5));
+//        System.out.println(writeParentheses("Rebekah", 2));
+//        System.out.println(writeParentheses("Recursive fun",0));
+//        System.out.println("5!=" + factorial(5));
+//        System.out.println("Exponential Method: 4^10=" + exponential(4,10));
 
         //System.out.print(writeParentheses("Error test",-1));
     }
 }
 
+
+
+//Recursion calls itself, passing a different parameter each time, until a base case is met.
+//It's a method that is a loop -
+//One loop structure does the heavy lifting. It's inverted; rather than many objects calling a method, a method calls itself many times.
+//FIFO: "First in, first out." LIFO: "Last in, first out." etc.
+//It's like asking "what position in line am I?" and asking the next person until you hit the front of the line, or "base" case.
+//Keeps asking a question until you get the answer out.
+//If (base case) {answer} else {recursive call}
+//Functional languages use recursion exclusively; no loops

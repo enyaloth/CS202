@@ -1,3 +1,5 @@
+// CS 202 - Week6 PrintTwos - Rebekah Parkhurst - 2/15/20 //
+
 package Week6;
 
 public class PrintTwos {
