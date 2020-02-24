@@ -1,9 +1,7 @@
-package Week7;
-import java.io.File;
-import java.util.*;
+//* Cs202 - Christina Parkhurst - List example *//
 
-// Set Theory: Union & Intersection. The union is the whole, the section is the overlap.
-//pg. 742 in book: union/intersection: UNION: addAll() - INTERSECTION: retainAll() - DIFFERENCE: removeAll() - superset/subset: constainsAll();
+package Week7;
+import java.util.*;
 
 public class CollectionsPractice {
     public static void main(String[] args) {
@@ -34,15 +32,11 @@ public class CollectionsPractice {
             System.out.println("word: " + a);
             itr.remove();
         }
-        System.out.println("New list: " + words);
-        System.out.println();
-
-        //this is a while iteration - it's unneeded.
-        System.out.println("Remove 0th element until empty:");
-     while(!words.isEmpty()) {
-         words.remove(0);
-         System.out.println(words);
-     }
+        System.out.println("New list: " + words + "\n");
         System.out.println("List has been emptied\n");
+
     }
 }
+
+// Set Theory: Union & Intersection. The union is the whole, the section is the overlap.
+//pg. 742 in book: union/intersection: UNION: addAll() - INTERSECTION: retainAll() - DIFFERENCE: removeAll() - superset/subset: constainsAll();

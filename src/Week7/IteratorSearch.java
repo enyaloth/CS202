@@ -1,29 +1,41 @@
+//* CS202 - Christina Parkhurst - Iterator Examples - 2/21/20 *//
 package Week7;
-//HW - two methods; one for manipulating the linkedlist (add or change), one for iterating over the linkedlist.
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class IteratorSearch {
+
     public static void main(String[] args) {
-        List<String> words = new LinkedList<String>();
-        // add to this sample, one method to change the linkedlist and a second method to iterate the linked list.
+        List<String> words = new LinkedList<>();
 
         for (int i=0; i<8; i++) {
             words.add("item" + i);
         }
-        System.out.println(words);
+        System.out.println("Initialized LinkList: ");
+        System.out.println(words + "\n");
 
-        Iterator<String> itr = words.iterator();
-        String result = itr.next();
-        System.out.println("Result before: " + result);
-        while (itr.hasNext()) {
-            String next = itr.next();
-            if (next.length()>result.length()) {
-                result = next;
-            }
+        changeLinkedList(words);
+        iterateLinkedList(words); {
+
         }
-        System.out.println(result);
+    }
+
+    public static void changeLinkedList(List<String> s) {
+        System.out.println("Manually replace all elements in LinkedList: ");
+        for (int i=0; i<s.size(); i++) {
+            s.set(i,"Replaced. ");
+        }
+        System.out.println(s + "\n");
+    }
+
+    public static void iterateLinkedList(List<String> s) {
+        System.out.println("Iterate across the LinkedList: ");
+        Iterator<String> itr = s.iterator();
+        while (itr.hasNext()) {
+            System.out.println(s);
+            String a = itr.next();
+            itr.remove();
+        }
+        System.out.println(s);
     }
 }

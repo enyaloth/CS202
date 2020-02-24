@@ -1,8 +1,7 @@
+//* Christina Parkhurst - MapExamples - 02/23/2020 *//
 package Week7;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class MapExamples {
     public static void main(String[] args) {
@@ -25,7 +24,5 @@ public class MapExamples {
             System.out.println("Value: " + value + " Key is: " + a);
         }
 
-        Set<Integer> nums = map.keySet();
-        System.out.println(nums);
     }
 }
