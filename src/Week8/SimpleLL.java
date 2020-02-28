@@ -10,15 +10,17 @@ public class SimpleLL {
         list.next = new ListNode(3);
         list.next.next = new ListNode(2);
 
-        System.out.println("1st List: " + list.data + "->" + list.next.data + "->" + list.next.next.data);
+        System.out.println("Manually create a linkedlist: ");
+        System.out.println("1st List: " + list.data + "->" + list.next.data + "->" + list.next.next.data + "\n");
 
         // 3) Insert Node at the end
+        System.out.println("Insert node at the end: ");
         ListNode temp = new ListNode(17);
         list.next.next.next = temp;
 
-        System.out.println("List with added end value: " + list.data + "->" + list.next.data + "->" + list.next.next.data + "->" + list.next.next.next.data);
+        System.out.println("List with added end value: " + list.data + "->" + list.next.data + "->" + list.next.next.data + "->" + list.next.next.next.data + "\n");
 
-        System.out.println("Testing just printing list: " + list); // Notice that list2 is a reference; not a value call
+        System.out.println("Testing just printing list: " + list + "\n"); // Notice that list2 is a reference; not a value call
 
         // 4) Inserting nodes at the beginning
         ListNode frontPiece = new ListNode(5,list);
@@ -39,17 +41,22 @@ public class SimpleLL {
 
         // 7) Add node w/ method
         ListNode adding = new ListNode(5);
-        adding.add(adding.add( adding.add( new ListNode(4) ) ) );
         adding.add(new ListNode(3));
-        System.out.println("Added: " + adding.data + " " + adding.next.data + " " + adding.next.next.data);
+        System.out.println("Added: " + adding.data + " " + adding.next.data);
 
 
         // Working with inserting & repointing nodes
         ListNode two = new ListNode(2);
-        ListNode nodey = new ListNode(1, new ListNode(3,two));
-        ListNode tempy = new ListNode(3, new ListNode(4));
-        nodey.next = tempy;
-        System.out.println(nodey.data + " " + nodey.next.data + " " + nodey.next.next.data);
+        ListNode nodey = new ListNode(1, new ListNode(3));
+        ListNode tempy = new ListNode(2, new ListNode(4));
+//        nodey.next = tempy;
+//        System.out.println(nodey.data + " " + nodey.next.data + " " + nodey.next.next.data);
+
+        System.out.println(nodey.data + " " + nodey.next.data);
+        System.out.println(tempy.data + " " + tempy.next.data);
+
+        nodey.interleave(tempy);
+        System.out.println("Interleave: " + nodey.data + " " + nodey.next.data + " " + nodey.next.next.data + " " + nodey.next.next.next.data);
 
         //In-Class Homework:
         //1) Create ListNode Class
@@ -58,9 +65,7 @@ public class SimpleLL {
         //4) Add node at the beginning
         //5) Insert Node in the middle
         //6) Interleave 2 LLs (like in video)
-
-
-
+        // CRUD - Create, Read, Update, Delete
 
     }
 }

@@ -58,7 +58,7 @@ public class PracticeIts {
 //        System.out.println(reverse);
 //       System.out.println(reverse(reverse));
 //        rarest(map);
-//        pairCounts(hamlet);
+        pairCounts(hamlet);
         //rarest(map);
     }
 

@@ -1,5 +1,7 @@
 package Week8;
 
+import java.sql.SQLOutput;
+
 public class ListNode {
     // 1) ListNode Class
     int data;
@@ -18,7 +20,7 @@ public class ListNode {
     }
 
     public boolean hasNext() {
-        if (next!=null) {
+        if (this.next!=null) {
             return true;
         }
         return false;
@@ -36,7 +38,30 @@ public class ListNode {
         return next;
     }
 
+    public ListNode interleave(ListNode b) {
+        ListNode current = this;
+        current.printList();
+        ListNode temp = null;
+        b.printList();
+        while (current.next != null) {
+            temp = new ListNode(b.data);
+            b = b.next;
+            temp.next = current.next;
+            current.next = temp;
+            current = current.next.next;
+        }
+        current.next = b;
+        return this;
+    }
 
+    public void printList() {
+        ListNode temp = this;
+        while (temp.next!=null) {
+            System.out.print("-> "+temp.data);
+            temp = temp.next;
+        }
+        System.out.println("-> "+temp.data);
+    }
 
 
 }
